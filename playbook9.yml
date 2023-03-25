@@ -1,0 +1,14 @@
+---
+- name: Install sw using loops
+  hosts: all
+  tasks:
+    - name: Install three sw's using loops
+      apt:
+        name: "{{item}}"
+        state: present
+        update_cache: yes
+      with_items:
+        - tree
+        - git
+        - maven
+...
