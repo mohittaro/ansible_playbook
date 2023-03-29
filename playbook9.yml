@@ -1,6 +1,7 @@
 ---
 - name: Install sw using loops
   hosts: all
+  serial: 1
   tasks:
     - name: Install three sw's using loops
       apt:
